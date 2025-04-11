@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заметки</title>
+    <meta name="description" content="Простое приложение для заметок с офлайн-доступом">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#4285F4">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body>
+    <div class="offline-indicator" id="offlineIndicator">
+        Офлайн-режим. Изменения будут сохранены, когда вы снова будете онлайн.
+    </div>
+    
+    <header>
+        <h1>Заметки</h1>
+    </header>
+    
+    <main>
+        <div class="note-form">
+            <textarea id="noteInput" placeholder="Напишите заметку..."></textarea>
+            <div style="display: flex; gap: 0.5rem;">
+                <button id="addNote">Добавить</button>
+                <button id="updateNote" style="display: none;">Обновить</button>
+                <button id="cancelEdit" style="display: none; background-color: #757575;">Отмена</button>
+            </div>
+        </div>
+        
+        <div class="notes-container" id="notesContainer">
+            <!-- Заметки будут добавлены здесь -->
+        </div>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>
